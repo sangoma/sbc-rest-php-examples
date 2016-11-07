@@ -2,14 +2,14 @@
 
 
 1. setting.inc.php 
-> API_KEY:  SBC API KEY created via pre-provisioning or SBC GUI 
-> SERVER: SBC IP address
+ * API_KEY:  SBC API KEY created via pre-provisioning or SBC GUI 
+ * SERVER: SBC IP address
 
 2. Execute php examples
-> eg: php application_core_list.php
+ * eg: php application_core_list.php
 
 3. REST Definition
-> safepy_def.json
+ * safepy_def.json
 
 
 **Upgrade Procedure**
