@@ -1,20 +1,18 @@
 Sangoma SBC REST API
 
-1. setting.inc.php
-   Add your API KEY
-   Add your SERVER IP
+
+1. setting.inc.php 
+> Add your API KEY
+> Add your SERVER IP
 
 2. Execute php examples
-   eg: php application_core_list.php
+> eg: php application_core_list.php
 
 3. REST Definition
-   safepy_def.json
+> safepy_def.json
 
-4. Python SDK
-   https://github.com/sangoma/safepy2
- 
 
-Upgrade Procedure
+***Upgrade Procedure***
 
 1.  php update_package_upload.php <absolute path of upgrade package>
 2.  php update_package_list.php  
@@ -26,9 +24,8 @@ Upgrade Procedure
 8.  php application_service_stop.php
 9.  php application_configuration_apply.php
 10. php application_service_start.php
-
-
-Backup 
+	
+***Backup***
 
 Set setting.inc.php for SBC that will be backed up
 
@@ -37,7 +34,7 @@ Set setting.inc.php for SBC that will be backed up
 3. php application_archive_download.php <backup file obtaion from _list.php>
    File will be written in /tmp directory
 
-Restore
+***Restore***
 
 Set setting.inc.php for SBC that will receive restore
 
