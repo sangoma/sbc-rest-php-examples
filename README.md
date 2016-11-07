@@ -1,9 +1,9 @@
-Sangoma SBC REST API
+*Sangoma SBC REST API Examples*
 
 
 1. setting.inc.php 
-> Add your API KEY
-> Add your SERVER IP
+> API_KEY:  SBC API KEY created via pre-provisioning or SBC GUI 
+> SERVER: SBC IP address
 
 2. Execute php examples
 > eg: php application_core_list.php
@@ -12,7 +12,7 @@ Sangoma SBC REST API
 > safepy_def.json
 
 
-***Upgrade Procedure***
+**Upgrade Procedure**
 
 1.  php update_package_upload.php <absolute path of upgrade package>
 2.  php update_package_list.php  
@@ -25,7 +25,7 @@ Sangoma SBC REST API
 9.  php application_configuration_apply.php
 10. php application_service_start.php
 	
-***Backup***
+**Backup**
 
 Set setting.inc.php for SBC that will be backed up
 
@@ -34,7 +34,7 @@ Set setting.inc.php for SBC that will be backed up
 3. php application_archive_download.php <backup file obtaion from _list.php>
    File will be written in /tmp directory
 
-***Restore***
+**Restore**
 
 Set setting.inc.php for SBC that will receive restore
 
