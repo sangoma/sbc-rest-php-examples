@@ -1,5 +1,5 @@
 <?php
 define("PEST_PATH", "./");
-define("API_KEY","817F1DB60306927C8D79126A62BF341C");
-define("SERVER","216.191.220.138");
+define("API_KEY","11112222333334444555666");
+define("SERVER","10.10.10.1");
 ?>

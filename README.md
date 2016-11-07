@@ -1,4 +1,4 @@
-*Sangoma SBC REST API Examples*
+**Sangoma SBC REST API Examples**
 
 
 1. setting.inc.php 
