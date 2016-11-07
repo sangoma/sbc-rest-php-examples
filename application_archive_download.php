@@ -12,7 +12,13 @@ $base_url = $options ['server'] . '/SAFe/sng_rest/api/';
 $method_name = 'download';
 $module_name = 'application';
 $obj_type = 'archive';
-$obj_name = 'kent_nsc_dev-backup-2013-07-03-12-40-29.tgz';
+
+if ($argc < 2) {
+    print "$argv[0] <specify the backup file name>\n\n";
+    exit(1);
+}
+
+$obj_name = $argv[1];
 
 $request_uri = $method_name . '/' . $module_name . '/' . $obj_type . '/' . $obj_name;
 
@@ -60,6 +66,7 @@ try {
 // print('$header : ' . $header.PHP_EOL);
 print ('URL      : ' . $base_url . $request_uri . PHP_EOL) ;
 print ('result   : ' . $msg . PHP_EOL) ;
+print ('saved in : /tmp' . PHP_EOL);
 
 /*
  * Output sample

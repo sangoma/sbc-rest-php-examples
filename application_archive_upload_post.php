@@ -16,6 +16,18 @@ $obj_name = '';
 
 $request_uri = $method_name . '/' . $module_name . '/' . $obj_type . '/' . $obj_name;
 
+if ($argc < 2) {
+    print "$argv[0] <path to nsc upgrade package file>\n\n";
+    exit(1);
+}
+
+$source_file = $argv[1];
+
+if (!file_exists($source_file)) {
+	print "Error " . $source_file . " file does not exist\n";
+	exit(1);
+}
+
 try {
     // API_KEY defined in 'setting.inc.php' send api key in header
     if (defined ( 'API_KEY' )) {
@@ -23,8 +35,6 @@ try {
     } else {
         $header = '';
     }
-    
-    $source_file = '/tmp/kent_nsc_dev-backup-test-1.tgz';
     
     // File you want to upload/post
     $post_data = array('Upload' => 'YES', 'archive' => "@".$source_file );

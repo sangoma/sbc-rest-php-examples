@@ -1,6 +1,6 @@
 <?php
 /*
- * application configuration reload 
+ * application configuration apply 
 */
 include_once 'setting.inc.php';      
 require_once PEST_PATH.'pest/PestJSON.php';
@@ -44,8 +44,8 @@ print('Status   : ' . $rc.PHP_EOL);
 
 /*
  * Output sample
-reload successful
-Output: 
+apply successful
+Output : 
 {
 	"status": true,
 	"method": "reload",
@@ -54,26 +54,18 @@ Output:
 }
 Status: 200
 
-reload failed
-Output: 
+
+System is running , can not apply
+Output : 
 {
 	"status": false,
 	"error": {
-		"sys_running": "System is not Running"
+		"sys_running": "System is Running"
 	},
-	"method": "reload",
+	"method": "apply",
 	"module": "application",
 	"type": "configuration"
-}
-Status: 400
- 
- {
-	"status": true,
-	"error": ["Post Write Failed for sipsecmon."],
-	"method": "reload",
-	"module": "application",
-	"type": "configuration"
-}Status: 200
+}Status: 400
  *
  * */
 ?>

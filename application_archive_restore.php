@@ -12,14 +12,18 @@ $base_url = $options ['server'] . '/SAFe/sng_rest/api/';
 $method_name = 'restore';
 $module_name = 'application';
 $obj_type = 'archive';
-$obj_name = 'kent_nsc_dev-backup-2013-07-03-12-40-29.tgz';
+
+if ($argc < 2) {
+    print "$argv[0] <path to nsc upgrade package file>\n\n";
+    exit(1);
+}
+
+$obj_name = $argv[1];
 
 $request_uri = $method_name . '/' . $module_name . '/' . $obj_type . '/' . $obj_name;
 
-$json_data = '
-{
-}';
-$data = json_decode ( $json_data );
+$data = array('backup_exclude_opts'=>array('network','license'));
+
 try {
     // API_KEY defined in 'setting.inc.php' send api key in header
     // $header_array[]="X-API-KEY:C2FF69E5B86551C8062F9B56E1065370"

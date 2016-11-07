@@ -11,15 +11,11 @@ $options['request'] = 'POST';
 $base_url = $options['server'] .'/SAFe/sng_rest/api/';
 $method_name = 'shutdown';
 $module_name = 'system';
-$obj_type = 'reboot/mode';
-$obj_name = '';
 
 #/SAFe/sng_rest/api/fwupdate/sngms/sngdsp0 
-#$request_uri =  $method_name .'/'. $module_name .'/'. $obj_type .'/'. $obj_name;
-$request_uri =  $method_name .'/'. $module_name .'/'. $obj_type;
+$request_uri =  $method_name .'/'. $module_name;
 
-$data = json_encode(array('mode'=>'reboot'));
-#$data = json_encode({'mode'=>'reboot'});
+$data = array('mode'=>'reboot');
 
 try {
     //API_KEY defined in 'setting.inc.php' send api key in header
