@@ -14,10 +14,10 @@
 
 ## Upgrade Procedure
 
-1.  php update_package_upload.php <absolute path of upgrade package>
+1.  php update_package_upload.php [absolute path of sbc upgrade package]
 2.  php update_package_list.php  
 3.  php application_service_stop.php
-4.  php update_package_install.php <upgrade package name>
+4.  php update_package_install.php [upgrade package name obtained from list php]
 5.  php sngms_fwupdate.php
 6.  php system_restart.php
 7.  Wait for system to come back up via ping test
