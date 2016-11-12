@@ -1,4 +1,4 @@
-**Sangoma SBC REST API Examples**
+# Sangoma SBC REST API Examples
 
 
 1. setting.inc.php 
@@ -12,7 +12,7 @@
  * safepy_def.json
 
 
-**Upgrade Procedure**
+## Upgrade Procedure
 
 1.  php update_package_upload.php <absolute path of upgrade package>
 2.  php update_package_list.php  
@@ -25,24 +25,26 @@
 9.  php application_configuration_apply.php
 10. php application_service_start.php
 	
-**Backup**
+## Backup
 
 Set setting.inc.php for SBC that will be backed up
 
 1. php application_archive_backup.php 
 2. php application_archive_list.php 
 3. php application_archive_download.php <backup file obtaion from _list.php>
-   File will be written in /tmp directory
+ * File will be written in /tmp directory
 
-**Restore**
+## Restore
 
 Set setting.inc.php for SBC that will receive restore
 
 1. php application_archive_upload_post.php <absolute path of backup download file in /tmp directory>
 2. php application_archive_list.php
-   Confirm restore is uploaded correctly
+ * Confirm restore is uploaded correctly
 3. php application_archive_restore.php  <restore file obtained from _list.php>
-   Restore will result in reboot.
-   Developer must timeout the restore.php after 2min
-4.  Wait for system to come back up via ping test
+ * Confirm result 
+4. php system_reboot.php 
+ * System must be rebooted
+4. Wait for system to come back up via ping test
 5. php application_archive_list.php
+
